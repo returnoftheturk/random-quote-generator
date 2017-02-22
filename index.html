@@ -6,50 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Basic Bootstrap Template</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- Optional Bootstrap theme -->
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<style media="screen">
 
-body{
-  background-color: #FFFAF0;
-
-  padding-top: 40px;
-}
-.container-fluid{
-  /*background-color: #FFFAF0;*/
-}
-.jumbotron{
-  position: relative;
-
-}
-#button{
-  /*position: relative;*/
-  /*height: 20%;*/
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-
-}
-#quote{
-  font-family: monospace;
-  font-size: 25px;
-}
-#quote-source{
-  font-family: monospace;
-  float: right;
-  padding-right: 100px;
-  padding-top: 10px;
-  font-size: 20px;
-}
-
-
-
-</style>
 <body>
-  <script src="quote.js">   </script>
+  <script src="quote.js"></script>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
@@ -72,8 +40,12 @@ body{
               New quote
             </button>
 
-          </div>
+            <a id="tweet" class="btn btn-primary twitter-share-button"
+              href="https://twitter.com/intent/tweet?text=%22He%20said,%20my%20son,%20temptation%20is%20one%20thing%20that%20I%27ve%20defeated%22%20-%20K%20dot"
+              <i class="fa fa-twitter"> </i> Tweet
+            </a>
 
+          </div>
 
         </div>
 
@@ -84,12 +56,7 @@ body{
 
     </div>
 
-
-
   </div>
 
-
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
