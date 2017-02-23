@@ -2,13 +2,21 @@ body{
   background-color: #FFFAF0;
 
   padding-top: 40px;
+  transition: background-color .3s;
 }
 .container-fluid{
   /*background-color: #FFFAF0;*/
 }
 .jumbotron{
   position: relative;
+  margin-top: 100px;
 
+
+}
+.main{
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 #button{
   /*position: relative;*/
