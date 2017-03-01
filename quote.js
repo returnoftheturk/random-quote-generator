@@ -23,14 +23,18 @@ $(document).ready(function(){
       },
       success: function(data){
         // var post = data.shift();
-        $("#quote-source").html("<p>- " + data.quoteAuthor + "</p>");
+        if (data.quoteAuthor!=""){
+          $("#quote-source").html("<p>- " + data.quoteAuthor + "</p>");
+
+        } else
+          $("#quote-source").html("<p>- Anonymous </p>");
         $("#tweet").attr('href', "https://twitter.com/intent/tweet?text=" + formatTweet(data.quoteText, data.quoteAuthor));
         $("#quote").html("<q>"+ data.quoteText + "</q>");
-        if (typeof data.custom_meta !== 'undefined' && typeof data.custom_meta.Source !== 'undefined') {
-          $('#quote-source').html('Source:' + data.custom_meta.Source);
-        } else {
-          $('#quote-source').text('');
-        }
+        // if (typeof data.custom_meta !== 'undefined' && typeof data.custom_meta.Source !== 'undefined') {
+        //   $('#quote-source').html('Source:' + data.custom_meta.Source);
+        // } else {
+        //   $('#quote-source').text('');
+        // }
       },
       cache: false
 
